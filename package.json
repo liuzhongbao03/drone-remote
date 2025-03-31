@@ -1,0 +1,49 @@
+{
+  "name": "drone-remote",
+  "version": "1.0.0",
+  "scripts": {
+    "dev:full": "concurrently -p \"[{name}]\" -n \"FRONTEND,BACKEND\" \"npm run dev\" \"npm run start\"",
+    "start": "node server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "tauri": "tauri dev",
+    "tauri:build": "tauri build",
+    "capacitor:android": "npx cap add android && npx cap open android",
+    "capacitor:ios": "npx cap add ios && npx cap open ios",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "antd-mobile": "^5.34.0",
+    "express": "^4.19.2",
+    "ws": "^8.17.0",
+    "@tauri-apps/api": "^1.5.2"
+  },
+  "devDependencies": {
+   "@tauri-apps/cli": "^1.5.2",
+    "@capacitor/cli": "^5.5.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/ws": "^8.5.10",
+    "@types/express": "^4.17.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.1.4",
+    "typescript": "^5.4.5",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "concurrently": "^9.1.2"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

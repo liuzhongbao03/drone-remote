@@ -1,0 +1,60 @@
+/* 全局样式 */
+:root {
+  --primary-color: #2196F3;
+  --danger-color: #f44336;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #1a1a1a;
+}
+
+.status-bar {
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+
+  .status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    &.connected {
+      background: #4CAF50;
+    }
+
+    &.disconnected {
+      background: var(--danger-color);
+    }
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  overflow: hidden;
+}
+
+/* 移动端触控优化 */
+@media (pointer: coarse) {
+
+  button,
+  .slider-handle {
+    min-width: 48px !important;
+    min-height: 48px !important;
+  }
+
+  .control-panel {
+    padding: 8px;
+
+    .param-item {
+      margin: 12px 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "build": {
+    "distDir": "../dist",
+    "devPath": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "tauri": {
+    "embeddedServer": {
+      "active": true
+    },
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "identifier": "com.example.droneremote"
+    }
+  }
+}

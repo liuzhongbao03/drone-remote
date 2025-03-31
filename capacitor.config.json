@@ -1,0 +1,14 @@
+{
+  "appId": "com.example.droneremote",
+  "appName": "Drone Remote",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "server": {
+    "allowNavigation": ["*"],
+    "cleartext": true
+  }
+}
